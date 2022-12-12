@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main>
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Bitcoin crucial levels straight from an algo!</h1>
+        <p class="col-md-8 fs-4">Using a series of utilities, our algo detect levels where activity has happened in the past. This information gives key insights to traders and investors both.</p>
+        <a href="{{url_for('btcusdt')}}"><button class="btn btn-primary btn-lg" type="button">Track levels for Bitcoin</button></a>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Track Ethereum</h2>
+          <p>Ethereum is a decentralized, open-source blockchain with smart contract functionality. Developers can use Ethereum to run decentralized applications and issue new crypto assets, known as Ethereum tokens.</p>
+          <a href="/ethusdt"><button class="btn btn-outline-light" type="button">Track Now</button></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Track other currencies</h2>
+          <p>Many cryptocurrencies have gained importance or hodl the promise to do so. Use these opportunities in other coins.</p>
+          <button class="btn btn-outline-secondary" type="button" disabled>Coming Soon</button>
+        </div>
+      </div>
+    </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container-fluid" style="background-color:#fff9f5;">
+    <h1 style="text-align:center; padding:10px; font-family: Georgia, serif;">
+        <img src="static/img/Bitcoin.png" class="btc-img" alt="Bitcoin Logo" style="width:120px; height:120px;">
+        Crucial levels for Bitcoin
+    </h1>
+    <div class="row">
+    <div class="col p-3" style="text-align:center;">
+        <div class="support-panel" style="border-radius:5px; margin:10px;padding:20px; background-color:#fff2e8; font-family: Georgia, serif;">
+        <h2>Support levels</h2>
+            <h5>{{ support[0][0] }} spotted on {{ support[0][1] }}</h5>
+            <h5>{{ support[1][0] }} spotted on {{ support[1][1] }}</h5>
+            <h5>{{ support[2][0] }} spotted on {{ support[2][1] }}</h5>
+
+        </div>
+        <div class="resistance-panel" style="border-radius:5px; margin:80px 10px 10px; padding:20px; background-color:#fff2e8;  font-family: Georgia, serif;">
+        <h2>Resistance levels</h2>
+            <h5>{{ resistance[0][0] }} spotted on {{ resistance[0][1] }}</h5>
+            <h5>{{ resistance[1][0] }} spotted on {{ resistance[1][1] }}</h5>
+            <h5>{{ resistance[2][0] }} spotted on {{ resistance[2][1] }}</h5>
+
+        </div>
+
+    </div>
+    <div class="col">
+        <div class="tradingview-widget-container">
+          <div id="tradingview_31d7a"></div>
+          <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/BTCUSD/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTCUSD Chart</span></a> by TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget(
+          {
+          "width": 720,
+          "height": 580,
+          "symbol": "BINANCE:BTCUSD",
+          "interval": "60",
+          "timezone": "Etc/UTC",
+          "theme": "light",
+          "style": "1",
+          "locale": "in",
+          "toolbar_bg": "#f1f3f6",
+          "enable_publishing": false,
+          "hide_side_toolbar": false,
+          "allow_symbol_change": true,
+          "container_id": "tradingview_31d7a"
+        }
+          );
+          </script>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
