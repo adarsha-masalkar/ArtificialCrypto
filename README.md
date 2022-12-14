@@ -1,7 +1,5 @@
 # ArtificialCrypto
 
-https://artificialcrypto.herokuapp.com/
-
 This website gives real-time crucial levels in Cryptocurrency.
 
 ![image](https://user-images.githubusercontent.com/97529973/207028058-b0baccc2-05ce-48fa-9fbf-89e6337bcecf.png)
